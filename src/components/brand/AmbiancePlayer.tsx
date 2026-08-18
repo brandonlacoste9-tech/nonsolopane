@@ -50,8 +50,10 @@ export function AmbiancePlayer() {
     }
 
     function onMario(event: Event) {
+      const player = audioRef.current;
+      if (!player) return;
       const speaking = Boolean((event as CustomEvent<{ speaking?: boolean }>).detail?.speaking);
-      audio.volume = speaking ? 0.08 : 0.28;
+      player.volume = speaking ? 0.08 : 0.28;
     }
 
     window.addEventListener('pointerdown', onGesture);
