@@ -1,7 +1,7 @@
 export const MARIO_VOICE = 'UEw8Jol3Z7Kb3TdaL0BQ';
 export const FALLBACK_VOICE = 'JBFqnCBsd6RMkjVDRZzb';
 
-export type VoiceLocale = 'en' | 'fr';
+export type VoiceLocale = 'en' | 'fr' | 'it';
 
 export function parseVoiceRequest(body: unknown): {
   text: string;
@@ -12,7 +12,7 @@ export function parseVoiceRequest(body: unknown): {
   const text = body.text.trim();
   if (text.length < 1 || text.length > 700) return null;
   const raw = 'locale' in body && typeof body.locale === 'string' ? body.locale : 'en';
-  const locale: VoiceLocale = raw === 'fr' ? 'fr' : 'en';
+  const locale: VoiceLocale = raw === 'fr' || raw === 'it' ? raw : 'en';
   return { text, locale };
 }
 

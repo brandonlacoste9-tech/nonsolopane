@@ -1,6 +1,6 @@
 # Non Solo Pane
 
-Family Italian bakery site for Dorval — wood-oven pizza, panini, pastry, and gelato. English and French.
+Family Italian bakery site for Dorval — wood-oven pizza, panini, pastry, and gelato. English, French, and Italian.
 
 ## Local
 

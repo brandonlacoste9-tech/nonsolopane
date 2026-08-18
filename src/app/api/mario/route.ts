@@ -19,7 +19,7 @@ export async function POST(request: Request) {
   }
 
   const raw = 'locale' in body && typeof body.locale === 'string' ? body.locale : 'en';
-  const locale: MarioLocale = raw === 'fr' ? 'fr' : 'en';
+  const locale: MarioLocale = raw === 'fr' || raw === 'it' ? raw : 'en';
 
   return NextResponse.json({ reply: answerMario(text, locale) });
 }

@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation';
 const locales = [
   { id: 'en', label: 'EN' },
   { id: 'fr', label: 'FR' },
+  { id: 'it', label: 'IT' },
 ] as const;
 
 export function LocaleSwitch() {

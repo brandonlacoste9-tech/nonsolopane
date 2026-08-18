@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "site": "Non Solo Pane",
+    "description": "Panificio italiano di famiglia a Dorval dal 2002. Pizza al forno a legna, panini, pasticceria e gelato sul Lakeshore."
+  },
+  "nav": {
+    "skip": "Vai al contenuto",
+    "menu": "Menu",
+    "catering": "Catering",
+    "about": "Chi siamo",
+    "contact": "Venire"
+  },
+  "home": {
+    "kicker": "Dorval · dal 2002",
+    "title": "Non solo pane.",
+    "lead": "Pizza al forno a legna, pasticceria italiana e gelato sul Bord-du-Lac. Un forno di famiglia. Venite presto per pranzo.",
+    "ctaMenu": "Vedi il menu",
+    "ctaVisit": "Passa",
+    "ctaCatering": "Chiedi il catering",
+    "strip": "Pizza · Panini · Pasticceria · Gelato · Catering",
+    "cateringTitle": "Per la tavola.",
+    "cateringLead": "Pranzi in ufficio, feste di famiglia, vassoi di pasta e pizza al forno a legna. Chiamate o scrivete — preparano dalla bottega di Dorval."
+  },
+  "catering": {
+    "kicker": "il catering",
+    "title": "Catering",
+    "lead": "Cuociono per più del bancone. Pizza, pasta, panini, pasticceria e gelato per la tavola — uffici, compleanni e le feste sul Lago.",
+    "body": "La bottega ha annunciato il catering da Dorval. Non c’è una carta prezzi pubblica: preventivano secondo la data e il numero. Date loro un giorno o due, se potete.",
+    "offersTitle": "Cosa mandano fuori",
+    "pizza": "Pizza al forno a legna",
+    "pizzaNote": "Napoletana e romana, fatte in bottega. Ordinate prima.",
+    "pasta": "Pasta e salse",
+    "pastaNote": "Tortellini, manicotti, cannelloni, ravioli — gli stessi piatti del bancone.",
+    "panini": "Panini e insalate",
+    "paniniNote": "Panini italiani e insalatine per un pranzo.",
+    "bakery": "Pasticceria, torte, gelato",
+    "bakeryNote": "Cannoli, zeppole, biscotti, torte e gelato al mezzo litro.",
+    "note": "Tempi e prezzi dipendono dal giorno. Chiamate il 514.631.2000 o scrivete a info@nonsolopane.ca. Questa non è una lista di pacchetti fissi.",
+    "ctaCall": "Chiama la bottega",
+    "ctaEmail": "Scrivi per il catering",
+    "mailSubject": "Catering — Non Solo Pane"
+  },
+  "mario": {
+    "kicker": "buongiorno",
+    "title": "Mario",
+    "open": "Chiedi a Mario",
+    "close": "Chiudi",
+    "placeholder": "Menu, orari, catering…",
+    "send": "Invia",
+    "mic": "Parla",
+    "listening": "Ascolto…",
+    "error": "La linea è caduta. Chiedetemi di nuovo, o chiamate il 514.631.2000."
+  },
+  "music": {
+    "idle": "Musica spenta",
+    "playing": "Musica accesa",
+    "on": "Avvia l’atmosfera del forno italiano",
+    "off": "Ferma la musica"
+  },
+  "about": {
+    "title": "Chi siamo",
+    "lead": "Non solo pane. Un forno di famiglia sul Chemin du Bord-du-Lac dal 2002.",
+    "body": "Cuociono. Infornano la pizza a legna. Riempiono cannoli e zeppole. C’è gelato, espresso, una piccola drogheria italiana, e una terrazza quando il lago è caldo. Servizio al bancone. Una fila a mezzogiorno. I clienti tornano per la crosta e i biscotti.",
+    "note": "Gli orari cambiano secondo le fonti. Chiamate il 514.631.2000 prima di attraversare la città."
+  },
+  "menu": {
+    "title": "Menu",
+    "lead": "Prezzi dalla scheda Uber Eats. La pizza è in bottega — forno a legna. Gli orari di consegna lì sono più corti.",
+    "pizza": "Pizza",
+    "pasta": "Pasta",
+    "panini": "Panini",
+    "salads": "Insalate",
+    "bakery": "Pasticceria",
+    "gelato": "Gelato",
+    "coffee": "Caffè",
+    "ask": "Chiedere in bottega"
+  },
+  "contact": {
+    "title": "Venire",
+    "hoursTitle": "Orari",
+    "hours": "Martedì–venerdì 10:30–18:00. Sabato–domenica 10:30–17:00. Chiuso lunedì.",
+    "hoursNote": "Alcune liste aprono alle 9:00. Chiamate se venite di prima mattina.",
+    "map": "Mappa",
+    "order": "Ordina",
+    "email": "Email"
+  },
+  "footer": {
+    "line": "Forno di famiglia · villaggio di Dorval"
+  }
+}

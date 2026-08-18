@@ -1,7 +1,9 @@
-export type SpeechLocale = 'en' | 'fr';
+export type SpeechLocale = 'en' | 'fr' | 'it';
 
 export function speechLang(locale: SpeechLocale): string {
-  return locale === 'fr' ? 'fr-CA' : 'en-CA';
+  if (locale === 'fr') return 'fr-CA';
+  if (locale === 'it') return 'it-IT';
+  return 'en-CA';
 }
 
 export type SpeechRecognitionLike = {
