@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { HouseName } from '@/components/brand/HouseName';
 import { Link } from '@/i18n/navigation';
 import { LocaleSwitch } from '@/components/layout/LocaleSwitch';
 
@@ -35,9 +36,7 @@ export async function SiteHeader() {
             className="h-[72px] w-[72px] rounded-full shadow-[0_0_0_1px_rgba(20,16,12,0.08)] md:h-[88px] md:w-[88px]"
           />
           <span className="leading-[1.05]">
-            <span className="block font-heading text-[1.65rem] text-ink md:text-[2rem]">
-              Non Solo Pane
-            </span>
+            <HouseName className="block font-heading text-[1.65rem] md:text-[2rem]" />
             <span className="font-script text-2xl leading-none text-tomato">dal 2002</span>
           </span>
         </Link>

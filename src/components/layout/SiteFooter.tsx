@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { HouseName } from '@/components/brand/HouseName';
 import { Link } from '@/i18n/navigation';
 import { house } from '@/content/house';
 
@@ -11,7 +12,9 @@ export async function SiteFooter() {
       <div className="italia-stripe w-full" aria-hidden="true" />
       <div className="mx-auto grid max-w-[1080px] gap-8 px-6 py-14 md:grid-cols-2">
         <div>
-          <p className="font-heading text-3xl">Non Solo Pane</p>
+          <p className="font-heading text-3xl">
+            <HouseName onDark />
+          </p>
           <p className="mt-2 font-script text-2xl text-brass">dal 2002</p>
           <p className="mt-4 text-sm text-[oklch(0.82_0.03_88)]">{t('line')}</p>
         </div>
