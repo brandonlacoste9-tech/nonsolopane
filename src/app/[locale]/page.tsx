@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { HouseName } from '@/components/brand/HouseName';
 import { Link } from '@/i18n/navigation';
 
 type Props = {
@@ -28,8 +29,8 @@ export default async function HomePage({ params }: Props) {
         />
         <div className="relative z-10 mx-auto max-w-[1080px] px-6 py-20 md:py-28">
           <p className="text-sm tracking-[0.22em] text-tomato uppercase">{t('kicker')}</p>
-          <h1 className="mt-5 max-w-3xl text-6xl leading-[0.95] text-ink md:text-8xl">
-            {t('title')}
+          <h1 className="mt-5 max-w-3xl text-6xl leading-[0.95] md:text-8xl">
+            <HouseName hero />
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">{t('lead')}</p>
           <div className="mt-10 flex flex-wrap gap-6">
