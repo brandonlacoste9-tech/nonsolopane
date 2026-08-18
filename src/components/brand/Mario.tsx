@@ -118,7 +118,7 @@ export function Mario() {
       });
       if (!res.ok) throw new Error('voice');
       const blob = await res.blob();
-      if (!blob.size || (blob.type && !blob.type.includes('audio'))) {
+      if (!blob.size || (blob.type.includes('json') || blob.type.includes('text'))) {
         throw new Error('voice');
       }
       if (token !== speakTokenRef.current) return;
