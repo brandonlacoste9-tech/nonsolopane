@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "site": "Non Solo Pane",
+    "description": "Boulangerie italienne familiale à Dorval depuis 2002. Pizza au four à bois, panini, pâtisseries et gelato sur le Bord-du-Lac."
+  },
+  "nav": {
+    "skip": "Aller au contenu",
+    "menu": "Menu",
+    "catering": "Traiteur",
+    "about": "À propos",
+    "contact": "Venir"
+  },
+  "home": {
+    "kicker": "Dorval · depuis 2002",
+    "title": "Pas seulement du pain.",
+    "lead": "Pizza au four à bois, pâtisserie italienne et gelato sur le Bord-du-Lac. Une boulangerie de famille. Venez tôt pour le midi.",
+    "ctaMenu": "Voir le menu",
+    "ctaVisit": "Passer",
+    "ctaCatering": "Demander le traiteur",
+    "strip": "Pizza · Panini · Pâtisserie · Gelato · Traiteur",
+    "cateringTitle": "Pour la table.",
+    "cateringLead": "Diners de bureau, fêtes de famille, plateaux de pâtes et pizza au four à bois. Appelez ou écrivez — ils préparent depuis la boutique de Dorval."
+  },
+  "catering": {
+    "kicker": "il catering",
+    "title": "Traiteur",
+    "lead": "Ils cuisent pour plus que le comptoir. Pizza, pâtes, panini, pâtisserie et gelato pour la table — bureaux, anniversaires, et les rassemblements du Bord-du-Lac.",
+    "body": "La boutique a annoncé du service traiteur depuis Dorval. Il n’y a pas de carte traiteur publique avec les prix : ils cotent selon la date et le nombre. Donnez-leur un jour ou deux si vous pouvez.",
+    "offersTitle": "Ce qu’ils envoient",
+    "pizza": "Pizza au four à bois",
+    "pizzaNote": "Napoletana et romaine, faites en boutique. Commandez d’avance.",
+    "pasta": "Pâtes et sauces",
+    "pastaNote": "Tortellini, manicotti, cannelloni, ravioli — les mêmes assiettes qu’au comptoir.",
+    "panini": "Panini et salades",
+    "paniniNote": "Sandwichs italiens et petites salades pour un lunch.",
+    "bakery": "Pâtisserie, gâteaux, gelato",
+    "bakeryNote": "Cannoli, zeppole, biscuits, gâteaux, et gelato au demi-litre.",
+    "note": "Les délais et les prix dépendent du jour. Appelez le 514.631.2000 ou écrivez à info@nonsolopane.ca. Ceci n’est pas une liste de forfaits fixes.",
+    "ctaCall": "Appeler la boutique",
+    "ctaEmail": "Écrire pour le traiteur",
+    "mailSubject": "Traiteur — Non Solo Pane"
+  },
+  "mario": {
+    "kicker": "buongiorno",
+    "title": "Mario",
+    "open": "Demander à Mario",
+    "close": "Fermer",
+    "placeholder": "Menu, heures, traiteur…",
+    "send": "Envoyer",
+    "mic": "Parler",
+    "listening": "J’écoute…",
+    "error": "La ligne a sauté. Reposez la question, ou appelez le 514.631.2000."
+  },
+  "music": {
+    "idle": "Musique éteinte",
+    "playing": "Musique allumée",
+    "on": "Lancer l’ambiance de boulangerie italienne",
+    "off": "Arrêter la musique"
+  },
+  "about": {
+    "title": "À propos",
+    "lead": "Non solo pane — pas seulement du pain. Une boulangerie de famille sur le chemin du Bord-du-Lac depuis 2002.",
+    "body": "Ils cuisent. Ils enfournent la pizza au bois. Ils garnissent cannoli et zeppole. Il y a du gelato, de l’espresso, une petite épicerie italienne, et une terrasse quand le lac est chaud. Service au comptoir. Une file à midi. Les habitués reviennent pour la croûte et les biscuits.",
+    "note": "Les heures varient selon les sources. Appelez le 514.631.2000 avant de traverser la ville."
+  },
+  "menu": {
+    "title": "Menu",
+    "lead": "Prix de leur fiche Uber Eats. La pizza est en boutique — four à bois. Les heures de livraison y sont plus courtes.",
+    "pizza": "Pizza",
+    "pasta": "Pâtes",
+    "panini": "Sandwichs",
+    "salads": "Salades",
+    "bakery": "Pâtisserie",
+    "gelato": "Gelato",
+    "coffee": "Café",
+    "ask": "Demander en boutique"
+  },
+  "contact": {
+    "title": "Venir",
+    "hoursTitle": "Heures",
+    "hours": "Mardi–vendredi 10 h 30–18 h. Samedi–dimanche 10 h 30–17 h. Fermé lundi.",
+    "hoursNote": "Certaines listes ouvrent à 9 h. Appelez si vous venez tôt.",
+    "map": "Carte",
+    "order": "Commander",
+    "email": "Courriel"
+  },
+  "footer": {
+    "line": "Boulangerie de famille · village de Dorval"
+  }
+}

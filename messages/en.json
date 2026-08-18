@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "site": "Non Solo Pane",
+    "description": "Family Italian bakery in Dorval since 2002. Wood-oven pizza, panini, pastry, and gelato on the Lakeshore."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "catering": "Catering",
+    "about": "About",
+    "contact": "Visit"
+  },
+  "home": {
+    "kicker": "Dorval · since 2002",
+    "title": "Not just bread.",
+    "lead": "Wood-oven pizza, Italian pastry, and gelato on the Lakeshore. A family bakery. Come early for lunch.",
+    "ctaMenu": "See the menu",
+    "ctaVisit": "Come by",
+    "ctaCatering": "Ask about catering",
+    "strip": "Pizza · Panini · Pastry · Gelato · Catering",
+    "cateringTitle": "For the table.",
+    "cateringLead": "Office lunches, family parties, trays of pasta and wood-oven pizza. Call or write — they set it up from the Dorval shop."
+  },
+  "catering": {
+    "kicker": "il catering",
+    "title": "Catering",
+    "lead": "They bake for more than the counter. Pizza, pasta, panini, pastry, and gelato for the table — offices, birthdays, and Lakeshore gatherings.",
+    "body": "The shop has posted catering from Dorval. There is no public catering card with prices, so they quote by the date and the headcount. Give them a day or two when you can.",
+    "offersTitle": "What they send out",
+    "pizza": "Wood-oven pizza",
+    "pizzaNote": "Napoletana and Roman, made in the shop. Order ahead.",
+    "pasta": "Pasta and sauces",
+    "pastaNote": "Tortellini, manicotti, cannelloni, ravioli — the same plates as the counter.",
+    "panini": "Panini and salads",
+    "paniniNote": "Italian sandwiches and small salads for a lunch spread.",
+    "bakery": "Pastry, cakes, gelato",
+    "bakeryNote": "Cannoli, zeppole, cookies, cakes, and gelato by the half-litre.",
+    "note": "Lead time and prices depend on the day. Call 514.631.2000 or email info@nonsolopane.ca. Do not treat this as a fixed package list.",
+    "ctaCall": "Call the shop",
+    "ctaEmail": "Email about catering",
+    "mailSubject": "Catering — Non Solo Pane"
+  },
+  "mario": {
+    "kicker": "buongiorno",
+    "title": "Mario",
+    "open": "Ask Mario",
+    "close": "Close",
+    "placeholder": "Ask about the menu, hours, catering…",
+    "send": "Send",
+    "mic": "Speak",
+    "listening": "Listening…",
+    "error": "The line dropped. Ask me again, or call 514.631.2000."
+  },
+  "music": {
+    "idle": "Music off",
+    "playing": "Music on",
+    "on": "Play Italian bakery ambiance",
+    "off": "Stop the music"
+  },
+  "about": {
+    "title": "About",
+    "lead": "Non solo pane — not just bread. A family bakery on Chemin du Bord-du-Lac since 2002.",
+    "body": "They bake. They fire pizza in a wood oven. They fill cannoli and zeppole. There is gelato, espresso, a small Italian grocery, and a terrace when the lake is warm. Counter service. A line at noon. Regulars come back for the crust and the cookies.",
+    "note": "Hours vary by source. Call 514.631.2000 before you cross town."
+  },
+  "menu": {
+    "title": "Menu",
+    "lead": "Prices from their Uber Eats card. Pizza is in the shop — wood oven. Delivery hours there are shorter than the bakery.",
+    "pizza": "Pizza",
+    "pasta": "Pasta",
+    "panini": "Sandwiches",
+    "salads": "Salads",
+    "bakery": "Pastry",
+    "gelato": "Gelato",
+    "coffee": "Coffee",
+    "ask": "Ask in the shop"
+  },
+  "contact": {
+    "title": "Visit",
+    "hoursTitle": "Hours",
+    "hours": "Tuesday–Friday 10:30–18:00. Saturday–Sunday 10:30–17:00. Closed Monday.",
+    "hoursNote": "Some listings open at 9:00. Call if you are coming first thing.",
+    "map": "Map",
+    "order": "Order",
+    "email": "Email"
+  },
+  "footer": {
+    "line": "Family bakery · Dorval village"
+  }
+}
