@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { openingMario, type MarioLocale } from '@/lib/mario';
 import { getSpeechRecognitionCtor, speechLang } from '@/lib/speech-input';
+import { planVoicePlayback, speechUtteranceLang } from '@/lib/voice-playback';
 
 type Line = { from: 'mario' | 'guest'; text: string };
 
@@ -25,10 +26,23 @@ export function Mario() {
   const endRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const objectUrlRef = useRef<string | null>(null);
+  const pendingUrlRef = useRef<string | null>(null);
   const speakTokenRef = useRef(0);
 
   useEffect(() => {
     setMicReady(Boolean(getSpeechRecognitionCtor()));
+  }, []);
+
+  useEffect(() => {
+    function flush() {
+      flushQueuedVoice();
+    }
+    window.addEventListener('pointerdown', flush);
+    window.addEventListener('keydown', flush);
+    return () => {
+      window.removeEventListener('pointerdown', flush);
+      window.removeEventListener('keydown', flush);
+    };
   }, []);
 
   useEffect(() => {
@@ -49,13 +63,52 @@ export function Mario() {
     };
   }, []);
 
+  function speakBrowser(text: string, token: number) {
+    if (!window.speechSynthesis) {
+      duckMusic(false);
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = speechUtteranceLang(locale);
+    utter.rate = 0.96;
+    utter.onend = () => {
+      if (token === speakTokenRef.current) duckMusic(false);
+    };
+    utter.onerror = () => {
+      if (token === speakTokenRef.current) duckMusic(false);
+    };
+    window.speechSynthesis.speak(utter);
+  }
+
+  async function playUrl(url: string, token: number) {
+    audioRef.current?.pause();
+    const audio = new Audio(url);
+    audio.preload = 'auto';
+    audio.volume = 1;
+    audioRef.current = audio;
+    audio.onended = () => {
+      if (token === speakTokenRef.current) duckMusic(false);
+    };
+    await audio.play();
+  }
+
+  function flushQueuedVoice() {
+    const url = pendingUrlRef.current;
+    if (!url) return;
+    pendingUrlRef.current = null;
+    window.speechSynthesis?.cancel();
+    const token = speakTokenRef.current;
+    void playUrl(url, token).catch(() => {
+      pendingUrlRef.current = url;
+    });
+  }
+
   async function speak(text: string) {
     const token = ++speakTokenRef.current;
+    pendingUrlRef.current = null;
+    window.speechSynthesis?.cancel();
     audioRef.current?.pause();
-    if (objectUrlRef.current) {
-      URL.revokeObjectURL(objectUrlRef.current);
-      objectUrlRef.current = null;
-    }
     duckMusic(true);
     try {
       const res = await fetch('/api/voice', {
@@ -65,18 +118,31 @@ export function Mario() {
       });
       if (!res.ok) throw new Error('voice');
       const blob = await res.blob();
+      if (!blob.size || (blob.type && !blob.type.includes('audio'))) {
+        throw new Error('voice');
+      }
       if (token !== speakTokenRef.current) return;
+      const prevUrl = objectUrlRef.current;
       const url = URL.createObjectURL(blob);
       objectUrlRef.current = url;
-      const audio = audioRef.current ?? new Audio();
-      audio.src = url;
-      audioRef.current = audio;
-      audio.onended = () => {
-        if (token === speakTokenRef.current) duckMusic(false);
-      };
-      await audio.play();
+      try {
+        await playUrl(url, token);
+      } catch (error) {
+        const name = error instanceof Error ? error.name : 'play';
+        if (planVoicePlayback({ receivedAudio: true, playError: name }) === 'wait-for-gesture') {
+          pendingUrlRef.current = url;
+          return;
+        }
+        throw error;
+      }
+      if (prevUrl) URL.revokeObjectURL(prevUrl);
     } catch {
-      if (token === speakTokenRef.current) duckMusic(false);
+      if (token !== speakTokenRef.current) return;
+      if (planVoicePlayback({ receivedAudio: false }) !== 'browser-tts') {
+        duckMusic(false);
+        return;
+      }
+      speakBrowser(text, token);
     }
   }
 
@@ -90,6 +156,8 @@ export function Mario() {
   function closeDesk() {
     setOpen(false);
     speakTokenRef.current += 1;
+    pendingUrlRef.current = null;
+    window.speechSynthesis?.cancel();
     audioRef.current?.pause();
     duckMusic(false);
   }
@@ -142,7 +210,7 @@ export function Mario() {
 
   return (
     <>
-      <audio ref={audioRef} className="hidden" />
+      <audio ref={audioRef} preload="auto" className="sr-only" />
       {open ? (
         <section
           className="fixed bottom-24 left-4 right-4 z-50 flex max-h-[min(34rem,72dvh)] flex-col border border-line bg-paper shadow-[0_12px_40px_rgba(40,24,12,0.12)] md:bottom-6 md:left-6 md:right-auto md:w-[26rem]"

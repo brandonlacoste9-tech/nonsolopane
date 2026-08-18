@@ -53,7 +53,15 @@ export function AmbiancePlayer() {
       const player = audioRef.current;
       if (!player) return;
       const speaking = Boolean((event as CustomEvent<{ speaking?: boolean }>).detail?.speaking);
-      player.volume = speaking ? 0.08 : 0.28;
+      if (speaking) {
+        player.volume = 0;
+        player.pause();
+        return;
+      }
+      player.volume = 0.28;
+      if (!mutedRef.current) {
+        void player.play().catch(() => undefined);
+      }
     }
 
     window.addEventListener('pointerdown', onGesture);
